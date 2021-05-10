@@ -35,13 +35,13 @@ public class IntegrationConfig {
 
     private FileReadingMessageSource fileReader(){
         FileReadingMessageSource source = new FileReadingMessageSource();
-        source.setDirectory(new File("source"));
+        source.setDirectory(new File("source/basic"));
         return source;
     }
 
     private FileWritingMessageHandler fileWriter(){
         FileWritingMessageHandler handler = new FileWritingMessageHandler(
-           new File("destination")
+           new File("destination/basic")
         );
         handler.setExpectReply(false);
         return handler;
